@@ -28,7 +28,7 @@ int main (){
 	if (pipe(ipc) == -1)
 		exit(-1);
 	
-	close(ipc[0]);//cierra el lector del hijo??!!
+	close(ipc[0]);
 	
 	switch (fork()){ 
 		

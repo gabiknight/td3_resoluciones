@@ -26,6 +26,7 @@
 void lee_mensaje(int a){ 
 
    write (0, "\nleer mensaje\n", sizeof("\nleer mensaje\n"));
+
    
    //-- Lee en cola de mensajes --------------------------
    leido = mq_receive(mqd, buff, attr_rcv.mq_msgsize, 0);
@@ -36,7 +37,10 @@ void lee_mensaje(int a){
       printf("Mensaje leido: %s\n", buff);
 }
 
-
+/**
+ * Función que se activa cuando el proceso recibe la señal SIGUSR1, finaliza el proceso
+ * @param a PID del proceso???
+ */
 void finaliza_proceso(int a){ 
 
    err = mq_close(mqd);

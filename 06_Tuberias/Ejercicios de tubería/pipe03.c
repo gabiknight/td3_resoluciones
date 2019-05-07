@@ -1,6 +1,5 @@
 /*
  * Ejercicio 3 de TP PIPE
- *hacer dos tuberiassss!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 */
 #include <stdio.h>
 #include <sys/types.h>

@@ -6,11 +6,10 @@
 #include <unistd.h>
 #include <string.h>
 #include <stdlib.h>
-#include <sys/wait.h>
 
 int main (){
 
-	int ipc[2], proc; //ipc[0] lectura ipc[1] escritura 
+	int ipc[2], proc;
 	int leido;
 	char buff[80];
 
@@ -18,7 +17,7 @@ int main (){
 
 	printf ("ipc[0] = %d ipc[1] =%d \n ", ipc[0], ipc[1]);	
 
-	proc = fork(); //hijo hereda descriptores
+	proc = fork();
 
 	if (proc == 0 ){ 
 		
@@ -42,7 +41,7 @@ int main (){
 	close(ipc[0]);
 	
 	printf("\nIngrese una cadena de caracteres por consola:\n");
-	// Se lee por consola desde teclado
+	// Se lee por consola
 	leido = read(0, buff,  sizeof(buff));
 
 	// Se escribe en la tuberia
